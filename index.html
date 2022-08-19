@@ -1,8 +1,29 @@
 <html>
     <head>
         <script src="scripts/wtf.js"></script>
+        <script>
+            function change_content(arg1, arg2) {
+                let x = document.getElementById("div_1"); // get the html element namely div_1
+                x.innerHTML = arg1 + "--" + arg2;
+                // x.innerHTML = '<input value="newnewnew" />'
+            }
+        </script>
+
     </head>
     <body>
+        <div id="div_1" style="color: red;">
+            <!-- <input value="put a value" /> -->
+            first value
+        </div>
+
+        <div id="div_2" style="color: green;">
+            second value
+        </div>
+
+        <input type="button" value="change" onclick="change_content('updated value 1', 'updated value2')"></input>
+
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
         August is Time Travel Month!!!<br/>
         <br/>
         So grab your popcorn and cola, and watch the best time travel movies, tv series, and short films!
