@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mlytics P2SP test</title>
+  <link href="https://vjs.zencdn.net/7.18.0/video-js.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+  <script src="https://vjs.zencdn.net/7.18.0/video.min.js"></script>
+  <script src="https://src.litix.io/videojs/4/videojs-mux.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@mlytics/p2sp-sdk@0.5.0-r2/bundle/driver.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@mlytics/p2sp-sdk@0.5.0-r2/bundle/peripheral/videojs-hls.min.js"></script>
+</head>
+<body>
+<div style="width: 800px">
+  <video id="video" class="video-js vjs-theme-fantasy"></video>
+</div>
+<script>
+    const driver = mlyp2sp.driver.initialize({
+        client: {
+            id: '$CLIENT_ID',
+            key: '$CLIENT_KEY'
+        }
+    });
+
+    const player = window.videojs('video', {
+        autoplay: true,
+        controls: true,
+        preload: 'auto',
+        aspectRatio: '16:9',
+        html5: {
+            hlsConfig: {
+                liveSyncDurationCount: Infinity,
+                loader: driver.integrations.HLSLoader
+            }
+        },
+        sources: [{
+            src: 'https://wowza.peer5.com/live/smil:bbb_abr.smil/playlist.m3u8',
+            type: 'application/vnd.apple.mpegurl'
+        }],
+        plugins: {
+            mux: {
+                data: {
+                    env_key: 'f7as69lr640inueq02ks6bqb3',
+                    video_title: 'bunny_1',
+                    viewer_user_id: 'bunny_user_1',
+                    player_name: 'videojs',
+                    sub_property_id: 'bunny_org_1',
+                    view_session_id: 'bunny_1',
+                    custom_1: 'bunny_client_id_1',
+                    custom_2: '20220809_test_live_stream'
+                }
+            }
+        }
+    });
+    player.muted(true);
+</script>
+</body>
+</html>
