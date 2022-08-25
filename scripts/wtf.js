@@ -62,7 +62,19 @@ function others(){
       1. Time Travel in Fiction Rundown - minutephysics`
   )
 }
+
 function show() {
   let x = document.getElementById("my-text")
   alert(x.value)
+}
+
+function change_content(arg1, arg2) {
+  let x = document.getElementById("div_1"); // get the html element namely div_1
+  x.innerHTML = arg1 + "--" + arg2;
+  // x.innerHTML = '<input value="newnewnew" />'
+}
+
+function change(arg1) {
+  let x = document.getElementById("div_1"); // get the html element namely div_1
+  x.innerHTML = arg1;
 }
