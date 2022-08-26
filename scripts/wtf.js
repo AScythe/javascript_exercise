@@ -23,11 +23,11 @@ function movies(){
       3. Summer Time Machine Blues
       4. Interstellar
       5. FAQ About Time Travel
-      6. Twelve Monkeys
+      6. 12 Monkeys
       7. Primer
-      8. About Time
-      9. Edge of Tomorrow
-      10. Groundhog Day`
+      8. Edge of Tomorrow
+      9. Groundhog Day
+      10. The Time Machine (1960 and 2003)`
 }
 
 function show_movies(){
