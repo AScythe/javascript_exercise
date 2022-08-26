@@ -2,6 +2,9 @@
 <html>
     <head>
         <script src="scripts/wtf.js"></script>
+        <script>
+            let x = a
+        </script>
     </head>
     <body>
         August is Time Travel Month!!!<br/>
@@ -13,6 +16,7 @@
         <input id="my-text" type="text" style="width: 500px;" />
         <input type="button" value="show" onclick="show()"></input>
         <br/>
+        Enter "movies", "series", or "shorts" on the field
         <br/>
         <br/>
         <div id="div_1" style="color: red;">
@@ -21,14 +25,14 @@
         </div>
 
         <input type="button" value="change 1" onclick="change_content('updated value 1', 'updated value2')"></input>
-        <input type="button" value="change 2" onclick="change(show())"></input>
+        <input type="button" value="change 2" onclick="request_text()"></input>
         <!-- if i press change 2 it will take value on the show() -->
-
+        <br/>
         <div id="div_2" style="color: green;">
             more buttons
             <br/>
             <input type="button" value="question" onclick="question1()"></input>
-            <input type="button" value="time travel movies" onclick="movies()"></input>
+            <input type="button" value="time travel movies" onclick="show_movies()"></input>
             <input type="button" value="time travel tv series" onclick="tvseries()"></input>
             <input type="button" value="time travel short films" onclick="shortfilms()"></input>
             <input type="button" value="time travel others" onclick="others()"></input>

@@ -12,9 +12,12 @@ function question1(){
   }
 }
 
+function show_alert(msg) {
+  alert(msg)
+}
+
 function movies(){
-  alert(
-    `Movies
+    return `Movies
       1. Back to the Future (Trilogy)
       2. Donnie Darko
       3. Summer Time Machine Blues
@@ -25,21 +28,21 @@ function movies(){
       8. About Time
       9. Edge of Tomorrow
       10. Groundhog Day`
-    )
+}
+
+function show_movies(){
+  show_alert(movies())
 }
 
 function tvseries(){
-  alert(
-    `TV series
+    return `TV series
         1. Dark
         2. Steins;Gate
         3. Boku Dake Ga Inai Machi`
-  )
 }
 
 function shortfilms(){
-  alert(
-    `Short Films (mostly youtube videos)
+  return `Short Films (mostly youtube videos)
       1. One-Minute Time Machine - Sploid
       2. This Is Why Eating Healthy Is Hard (Time Travel Dietician) - Funny Or Die
       3. Exit Strategy - Omeleto
@@ -50,7 +53,6 @@ function shortfilms(){
       8. Echo/Back - The Time Travel Virus - Torchborne Screens
       9. A Single Life - Job, Joris & Marieke
       10. Timeless - Planet Froth`
-  )
 }
 
 function others(){
@@ -77,4 +79,25 @@ function change_content(arg1, arg2) {
 function change(arg1) {
   let x = document.getElementById("div_1"); // get the html element namely div_1
   x.innerHTML = arg1;
+}
+
+
+function request_text() {
+  let fieldtext = document.getElementById("my-text").value;
+  // alert(value);
+  if (fieldtext == 'movies') {
+    let movies_list = movies();
+    let div1 = document.getElementById("div_1");
+    div1.innerHTML = movies_list;
+  }
+  if (fieldtext == 'series') {
+      let series_list = tvseries();
+      let div1 = document.getElementById("div_1");
+      div1.innerHTML = series_list;
+  }
+  if (fieldtext == 'shorts') {
+    let shorts_list = shortfilms();
+    let div1 = document.getElementById("div_1");
+    div1.innerHTML = shorts_list;
+  }
 }
