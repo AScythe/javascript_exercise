@@ -84,20 +84,28 @@ function change(arg1) {
 
 function request_text() {
   let fieldtext = document.getElementById("my-text").value;
-  // alert(value);
+  // alert(fieldtext);
   if (fieldtext == 'movies') {
-    let movies_list = movies();
+    let movies_list = movies().replace(/\n/g, "<br/>");
     let div1 = document.getElementById("div_1");
     div1.innerHTML = movies_list;
-  }
-  if (fieldtext == 'series') {
-      let series_list = tvseries();
+    // return;
+  } else if (fieldtext == 'series') {
+      let series_list = tvseries().replace(/\n/g, "<br/>");
       let div1 = document.getElementById("div_1");
       div1.innerHTML = series_list;
-  }
-  if (fieldtext == 'shorts') {
-    let shorts_list = shortfilms();
+      // return;
+  } else if (fieldtext == 'shorts') {
+    let shorts_list = shortfilms().replace(/\n/g, "<br/>");
     let div1 = document.getElementById("div_1");
     div1.innerHTML = shorts_list;
+    // return;
+  } else {
+    let others = fieldtext
+    let div1 = document.getElementById("div_1")
+    div1.innerHTML = others
+    return;
   }
+
+  // alert(1); // to test how else if and return works
 }
