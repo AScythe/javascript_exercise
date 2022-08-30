@@ -12,10 +12,6 @@ function question1(){
   }
 }
 
-function show_alert(msg) {
-  alert(msg)
-}
-
 function movies(){
     return `Movies
       1. Back to the Future (Trilogy)
@@ -30,6 +26,10 @@ function movies(){
       10. The Time Machine (1960 and 2003)`
 }
 
+function show_alert(msg) {
+  alert("Here are the Best Time Travel " + msg)
+}
+
 function show_movies(){
   show_alert(movies())
 }
@@ -39,6 +39,10 @@ function tvseries(){
         1. Dark
         2. Steins;Gate
         3. Boku Dake Ga Inai Machi`
+}
+
+function show_tvseries(){
+  show_alert(tvseries())
 }
 
 function shortfilms(){
@@ -55,14 +59,20 @@ function shortfilms(){
       10. Timeless - Planet Froth`
 }
 
+function show_shortfilms(){
+  show_alert(shortfilms())
+}
+
 function others(){
-  alert(
-    `Time Travel Might Be Real?!?
+  return `Others
+    Time Travel Might Be Real?!?
       1. Proof of Time Travel Pat McAfee Show
-    
-    Time Travel Movie Guide<br/>
+    Time Travel Movie Guide
       1. Time Travel in Fiction Rundown - minutephysics`
-  )
+}
+
+function show_others(){
+  show_alert(others())
 }
 
 function show() {
@@ -106,6 +116,5 @@ function request_text() {
     div1.innerHTML = others
     return;
   }
-
   // alert(1); // to test how else if and return works
 }
