@@ -1,19 +1,19 @@
 "use strict";
 
-function question1(){
+function question1() {
   let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
 
   if (year < 2015) {
-    alert( 'Too early...' );
+    alert('Too early...');
   } else if (year > 2015) {
-    alert( 'Too late' );
+    alert('Too late');
   } else {
-    alert( 'Exactly!' );
+    alert('Exactly!');
   }
 }
 
-function movies(){
-    return `Movies
+function movies() {
+  return `Movies
       1. Back to the Future (Trilogy)
       2. Donnie Darko
       3. Summer Time Machine Blues
@@ -30,33 +30,33 @@ function show_alert(msg) {
   alert("Here are the Best Time Travel " + msg)
 }
 
-function show_movies(){
+function show_movies() {
   show_alert(movies())
 }
 
-function tvseries(){
-    return `TV series
+function tvseries() {
+  return `TV series
         1. Dark
         2. Steins;Gate
         3. Boku Dake Ga Inai Machi`
 }
 
-function show_tvseries(){
+function show_tvseries() {
   show_alert(tvseries())
 }
 
-function shortfilms(){
+function shortfilms() {
   return `Short Films (mostly youtube videos)
       1. One-Minute Time Machine - Sploid
       2. This Is Why Eating Healthy Is Hard (Time Travel Dietician) - Funny Or Die
       3. Exit Strategy - Omeleto
       4. Chrono Perambulator - gavdoff
-      5. Dirty Machines: The End of History - Short of the Week
-      6. Time - TROPFEST
-      7. CTRL Z - DUST
+      5. CTRL Z - DUST
+      6. Dirty Machines: The End of History - Short of the Week
+      7. Time - TROPFEST
       8. Echo/Back - The Time Travel Virus - Torchborne Screens
-      9. A Single Life - Job, Joris & Marieke
-      10. Timeless - Planet Froth`
+      9. Timeless - Planet Froth
+      10. Interview With A Time Traveler - DUST`
 }
 
 function show_shortfilms(){
@@ -65,10 +65,10 @@ function show_shortfilms(){
 
 function others(){
   return `Others
-    Time Travel Might Be Real?!?
-      1. Proof of Time Travel Pat McAfee Show
+    Time Travel Might Be Real ? !?
+    1. Proof of Time Travel Pat McAfee Show
     Time Travel Movie Guide
-      1. Time Travel in Fiction Rundown - minutephysics`
+  1. Time Travel in Fiction Rundown - minutephysics`
 }
 
 function show_others(){
