@@ -2,13 +2,21 @@
   <head></head>
   <body>
     <script>
-      var a = document.createElement('a');
-      var linkText = document.createTextNode("my title text");
+      // <a href="http://alvin.sucks">value</a> // this is the element a with link and text
+      
+      var a = document.createElement('a'); // to create a http element called a
+      var linkText = document.createTextNode("my title text"); // this is the text
       a.appendChild(linkText);
       a.title = "my title text";
       a.href = "http://example.com";
       document.body.appendChild(a);
+
+
+      
     </script>
+
+    
+
   </body>
 </html>
 
