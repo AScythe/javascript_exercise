@@ -15,13 +15,13 @@ function render_movies_radio_buttons2() {
   }
 
 function simply_list() {
-    var a = ""
+    var list_final = ""
     movies_array().forEach(function (movie_array) {
-      let b = movie_array[0];
-      a += b + "<br/>";
+      let list_initial = movie_array[0];
+      list_final += list_initial + "<br/>";
     });
     // document.getElementById("movies_list_container").innerHTML = a;
-    return a
+    return list_final
   }
 
 // function request_text2() {
