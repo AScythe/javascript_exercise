@@ -26,9 +26,9 @@ function movies() {
       10. The Time Machine (1960 and 2003)`;
 }
 
-function show_alert(msg) {
-  alert("Here are the Best Time Travel " + msg)
-}
+// function show_alert(msg) {
+//   alert("Here are the Best Time Travel " + msg)
+// }
 
 function show_movies() {
   show_alert(movies())
@@ -117,52 +117,4 @@ function request_text() {
     return;
   }
   // alert(1); // to test how else if and return works
-}
-
-// ----------------------------------------------
-
-function movies_array() {
-  return [
-    "1. Back to the Future (Trilogy)",
-    "2. Donnie Darko",
-    "3. Summer Time Machine Blues",
-    "4. Interstellar",
-    "5. FAQ About Time Travel",
-    "6. 12 Monkeys",
-    "7. Primer",
-    "8. Edge of Tomorrow",
-    "9. Groundhog Day",
-    "10. The Time Machine (1960 and 2003)"
-  ]
-}
-
-function redirect() {
-  location.href = "http://www.google.com";
-}
-
-function get_radio_value() {
-  let movies = document.getElementsByName("movie");
-
-  // alert(movies.length);
-
-  movies.forEach(function (radio_btn) {
-    // alert(radio_btn.value);
-    if (radio_btn.checked) {
-      location.href = radio_btn.value;
-    }
-  });
-}
-
-function render_movies_radio_buttons() {
-  movies_array().forEach(function (movie_title) {
-    let new_radio = ('<input type="radio" value="TBD" name="movie">' + movie_title + '</input>');
-
-    document.getElementById("movies_radio_container").append(new_radio);
-  })
-}
-
-function createRadioElement() {
-  var radioInput = document.createElement('input');
-  radioInput.setAttribute('type', 'radio');
-  radioInput.setAttribute('name', name);
 }
