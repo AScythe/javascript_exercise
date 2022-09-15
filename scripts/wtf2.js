@@ -1,23 +1,5 @@
 "use strict";
 
-function movies() {
-  return `Movies
-        1. Back to the Future (Trilogy)
-        2. Donnie Darko
-        3. Summer Time Machine Blues
-        4. Interstellar
-        5. FAQ About Time Travel
-        6. 12 Monkeys
-        7. Primer
-        8. Edge of Tomorrow
-        9. Groundhog Day
-        10. The Time Machine (1960 and 2003)`;
-}
-
-function show_alert(msg) {
-  alert("Here are the Best Time Travel " + msg)
-}
-
 function movies_array() {
   return [
     ["1. Back to the Future (Trilogy)", "http://1www.google.com"],
@@ -33,21 +15,21 @@ function movies_array() {
   ]
 }
 
-function redirect() {
-  location.href = "http://www.google.com";
-}
-
 function get_radio_value() {
   let movies = document.getElementsByName("movie");
-
   // alert(movies.length);
-
   movies.forEach(function (radio_btn) {
     // alert(radio_btn.value);
     if (radio_btn.checked) {
       location.href = radio_btn.value;
     }
   });
+}
+
+function load_remote_movies() {
+  fetch("./movies.json")
+  .then(res => res.json())
+  .then(out => alert(out))
 }
 
 function render_movies_radio_buttons() {

@@ -12,6 +12,11 @@ function question1() {
   }
 }
 
+function show() {
+  let x = document.getElementById("my-text")
+  alert(x.value)
+}
+
 function movies() {
   return `Movies
       1. Back to the Future (Trilogy)
@@ -26,23 +31,11 @@ function movies() {
       10. The Time Machine (1960 and 2003)`;
 }
 
-// function show_alert(msg) {
-//   alert("Here are the Best Time Travel " + msg)
-// }
-
-function show_movies() {
-  show_alert(movies())
-}
-
 function tvseries() {
   return `TV series
         1. Dark
         2. Steins;Gate
         3. Boku Dake Ga Inai Machi`
-}
-
-function show_tvseries() {
-  show_alert(tvseries())
 }
 
 function shortfilms() {
@@ -59,10 +52,6 @@ function shortfilms() {
       10. Interview With A Time Traveler - DUST`
 }
 
-function show_shortfilms() {
-  show_alert(shortfilms())
-}
-
 function others() {
   return `Others
     Time Travel Might Be Real ? !?
@@ -71,13 +60,24 @@ function others() {
   1. Time Travel in Fiction Rundown - minutephysics`
 }
 
-function show_others() {
-  show_alert(others())
+function show_alert(msg) {
+  alert("Here are the Best Time Travel " + msg)
 }
 
-function show() {
-  let x = document.getElementById("my-text")
-  alert(x.value)
+function show_movies() {
+  show_alert(movies())
+}
+
+function show_tvseries() {
+  show_alert(tvseries())
+}
+
+function show_shortfilms() {
+  show_alert(shortfilms())
+}
+
+function show_others() {
+  show_alert(others())
 }
 
 function change_content(arg1, arg2) {
@@ -117,4 +117,8 @@ function request_text() {
     return;
   }
   // alert(1); // to test how else if and return works
+}
+
+function redirect() {
+  location.href = "http://www.google.com";
 }
